@@ -6,8 +6,13 @@
 # You should also read /usr/share/doc/collectd/README.Debian.plugins before
 # enabling any more plugins.
 
+<%- if @node[:collectd][:use_fqdn] %>
 Hostname "<%= @node[:fqdn] %>"
 FQDNLookup true
+<%- else %>
+Hostname "<%= @node[:collectd][:hostname] %>"
+FQDNLookup false
+<%- end %>
 BaseDir "<%= @node[:collectd][:base_dir] %>"
 PluginDir "<%= @node[:collectd][:plugin_dir] %>"
 TypesDB "<%= @node[:collectd][:types_db].join('", "') %>"
