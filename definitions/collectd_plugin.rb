@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-define :collectd_plugin, :options => {}, :template => nil, :cookbook => nil do
+define :collectd_plugin, :options => {}, :template => nil, :cookbook => nil, :load_options => {} do
   template "#{node[:collectd][:plugin_conf_dir]}/#{params[:name]}.conf" do
     owner "root"
     group "root"
@@ -29,7 +29,7 @@ define :collectd_plugin, :options => {}, :template => nil, :cookbook => nil do
       source params[:template]
       cookbook params[:cookbook]
     end
-    variables :name=>params[:name], :options=>params[:options]
+    variables :name=>params[:name], :options=>params[:options], :load_options=>params[:load_options]
     notifies :restart, resources(:service => "collectd")
   end
 end
