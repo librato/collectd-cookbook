@@ -17,9 +17,9 @@ The [collectd_plugins](#) cookbook is not required, but provides many common plu
 * collectd.plugin_conf_dir - 
 * collectd.types_db - Array of files to read graph type information from.
 * collectd.interval - Time period in seconds to wait between data reads.
-* collectd.read_threads - 
+* collectd.read_threads - Number of threads to start for reading plugins. (default = 5)
 * collectd.version - 
-* collectd.use_fqdn - 
+* collectd.use_fqdn - When enabled, the hostname of the node is set to the fully qualified domain.
 * collectd.hostname - 
 
 * collectd.collectd_web.path - Location to install collectd_web to. Defaults to /srv/collectd_web.
