@@ -23,7 +23,6 @@ default[:collectd][:plugin_conf_dir] = "/etc/collectd/plugins"
 default[:collectd][:types_db] = ["/usr/share/collectd/types.db"]
 default[:collectd][:interval] = 10
 default[:collectd][:read_threads] = 5
-default[:collectd][:version] = "5.4.0"
 
 default[:collectd][:use_fqdn] = true
 default[:collectd][:hostname] = ""
