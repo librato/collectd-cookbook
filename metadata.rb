@@ -4,7 +4,7 @@ maintainer_email "noah@coderanger.net"
 license          "Apache 2.0"
 description      "Install and configure the collectd monitoring daemon"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
-version          "1.0.4"
+version          "1.0.5"
 supports         "ubuntu"
 
 recipe "collectd", "Installs collectd standalone"
